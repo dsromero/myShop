@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status: MyString
+  means_of_payment: MyString
+  shipping_address: MyString
+  citof_ships: MyString
+  buyer_first_name: MyString
+  buyer_last_name: MyString
+
+two:
+  status: MyString
+  means_of_payment: MyString
+  shipping_address: MyString
+  citof_ships: MyString
+  buyer_first_name: MyString
+  buyer_last_name: MyString
