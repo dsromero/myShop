@@ -18,7 +18,7 @@ class OrdersControllerTest < ActionController::TestCase
 
   test "should create order" do
     assert_difference('Order.count') do
-      post :create, order: { buyer_first_name: @order.buyer_first_name, buyer_last_name: @order.buyer_last_name, citof_ships: @order.citof_ships, means_of_payment: @order.means_of_payment, shipping_address: @order.shipping_address, status: @order.status }
+      post :create, order: { city_of_shipping: @order.city_of_shipping, first_name_buyer: @order.first_name_buyer, means_of_payment: @order.means_of_payment, order_status: @order.order_status, second_name_buyer: @order.second_name_buyer, shipping_address: @order.shipping_address }
     end
 
     assert_redirected_to order_path(assigns(:order))
@@ -35,7 +35,7 @@ class OrdersControllerTest < ActionController::TestCase
   end
 
   test "should update order" do
-    patch :update, id: @order, order: { buyer_first_name: @order.buyer_first_name, buyer_last_name: @order.buyer_last_name, citof_ships: @order.citof_ships, means_of_payment: @order.means_of_payment, shipping_address: @order.shipping_address, status: @order.status }
+    patch :update, id: @order, order: { city_of_shipping: @order.city_of_shipping, first_name_buyer: @order.first_name_buyer, means_of_payment: @order.means_of_payment, order_status: @order.order_status, second_name_buyer: @order.second_name_buyer, shipping_address: @order.shipping_address }
     assert_redirected_to order_path(assigns(:order))
   end
 

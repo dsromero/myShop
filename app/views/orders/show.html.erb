@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Status:</strong>
-  <%= @order.status %>
+  <strong>Order status:</strong>
+  <%= @order.order_status %>
 </p>
 
 <p>
@@ -16,18 +16,18 @@
 </p>
 
 <p>
-  <strong>Citof ships:</strong>
-  <%= @order.citof_ships %>
+  <strong>City of shipping:</strong>
+  <%= @order.city_of_shipping %>
 </p>
 
 <p>
-  <strong>Buyer first name:</strong>
-  <%= @order.buyer_first_name %>
+  <strong>First name buyer:</strong>
+  <%= @order.first_name_buyer %>
 </p>
 
 <p>
-  <strong>Buyer last name:</strong>
-  <%= @order.buyer_last_name %>
+  <strong>Second name buyer:</strong>
+  <%= @order.second_name_buyer %>
 </p>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
