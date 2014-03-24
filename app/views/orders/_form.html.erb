@@ -35,6 +35,11 @@
     <%= f.label :second_name_buyer %><br>
     <%= f.text_field :second_name_buyer %>
   </div>
+
+  <%= f.fields_for :line_items do |builder| %>
+    <%= render "line_item_fields", :f => builder %>
+  <% end %>
+  
   <div class="actions">
     <%= f.submit %>
   </div>

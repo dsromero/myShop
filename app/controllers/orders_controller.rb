@@ -15,6 +15,7 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @order = Order.new
+    @order.line_items.build
   end
 
   # GET /orders/1/edit
@@ -69,6 +70,7 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:order_status, :means_of_payment, :shipping_address, :city_of_shipping, :first_name_buyer, :second_name_buyer)
+      params.require(:order).permit(:order_status, :means_of_payment, :shipping_address, :city_of_shipping, :first_name_buyer, :second_name_buyer, line_items_attributes:[:product_id, :amount, :price])
     end
+
 end

@@ -1,0 +1,12 @@
+<div>
+	<p>
+		<h3>Line Item</h3>
+		<%= f.fields_for :products do |builder| %>
+			<%= f.collection_select :product_id, Product.all, :id, :name, prompt: true %>
+			<%= f.label :price, "price" %>
+			<%= f.text_field :price %>
+			<%= f.label :amount, "amount" %>
+			<%= f.text_field :amount %>
+		<% end %>
+	</p>
+</div>

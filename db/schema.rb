@@ -11,10 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140317162823) do
+ActiveRecord::Schema.define(version: 20140324174927) do
 
   create_table "line_items", force: true do |t|
-    t.string   "product"
     t.integer  "amount"
     t.float    "price"
     t.datetime "created_at"
@@ -46,6 +45,7 @@ ActiveRecord::Schema.define(version: 20140317162823) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "category"
+    t.float    "price"
   end
 
 end
